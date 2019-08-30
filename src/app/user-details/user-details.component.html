@@ -1,0 +1,58 @@
+
+
+
+
+
+<input type="text" [(ngModel)]="filterText" placeholder="filter movies here..">
+<br><br>
+<form action="">
+    <input  #mySearch type="text" placeholder="Search for movies..">
+    <button (click) = "searchinput(mySearch.value)"  type="submit">Go!</button>
+</form>
+
+
+<ul class="container_movie_desc">
+    <li *ngFor="let movie of Movies.results | filter:filterText">
+        <article class="movie_desc">
+               
+                <a href="#">
+                   <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="">
+                </a>
+                
+               
+                
+                <section class="preview">
+                        <div class="meta">
+                                <li>
+                                    <a href="#">Genre</a>
+                                </li>
+            
+                                <li>
+                                    <a href="#">Rating:{{movie.vote_average}}</a>
+                                </li>
+                        </div>
+            
+                        <div class="content">
+                                <h2>{{movie.title }}</h2>
+                                <!-- <h4>Ratings:{{movie.vote_average}}</h4> -->
+                                <!-- <h4>Votes:{{movie.vote_count}} </h4> -->
+                                <p>Directed by:<a href="">XXX</a> released on:XXX {{movie.vote_count}}votes</p>
+                                <div class="body">
+                                    <p>
+                                        {{movie.overview}}
+                                    </p>
+                                </div>
+                        </div>
+                </section>
+        </article>
+    </li>
+</ul>
+
+
+<!-- <input type="text" [(ngModel)]="searchText" placeholder="filter movies here..">
+
+<ul>
+    <li *ngFor="let m of Movies.results | filter:searchText">
+        {{m.title}};
+    </li>
+</ul> -->

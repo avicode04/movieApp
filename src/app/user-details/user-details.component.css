@@ -1,0 +1,41 @@
+
+.meta a{
+    font-style: italic;
+}
+
+.meta li{
+    display: inline;
+}
+
+.meta li::after{
+    content: '\\';
+    padding: 0 5px;
+    color:#999;
+}
+
+.meta li:last-child::after{
+    content: '';
+}
+
+article img{
+     float: left; 
+    margin-right: 20px;
+    width: 200px;
+}
+
+article div{
+    float: right;
+    width: 530px;
+    /* background-color: green; */
+    
+}
+
+article{
+    height: 400px;
+    /* background-color: red; */
+}
+
+.container_movie_desc{
+    list-style-type: none;
+}
+
