@@ -1,0 +1,45 @@
+
+
+
+<!-- {{movie.title}}
+<div *ngIf="selected">
+    <h2>{{selecte.title}}</h2>
+</div> -->
+
+<!-- <div *ngIf="movie">
+    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="">
+    <h2>{{movie.title}}</h2>
+    <p>{{movie.overview}}</p>
+
+</div> -->
+
+<article class="movie_desc">
+               
+        <a href="">
+           <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="">
+        </a>
+         
+        <section class="preview">
+                <div class="meta">
+                        <li>
+                            <a href="#">Genre</a>
+                        </li>
+    
+                        <li>
+                            <a href="#">Rating:{{movie.vote_average}}</a>
+                        </li>
+                </div>
+    
+                <div class="content">
+                        <h2>{{movie.title }}</h2>
+                        <!-- <h4>Ratings:{{movie.vote_average}}</h4> -->
+                        <!-- <h4>Votes:{{movie.vote_count}} </h4> -->
+                        <p>Directed by:<a href="">XXX</a> released on:XXX {{movie.vote_count}}votes</p>
+                        <div class="body">
+                            <p>
+                                {{movie.overview}}
+                            </p>
+                        </div>
+                </div>
+        </section>
+</article>

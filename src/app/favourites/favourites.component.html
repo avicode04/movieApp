@@ -1,0 +1,43 @@
+<p>favourites works!</p>
+
+<div>
+    <li *ngFor="let movie of movie">
+        <article class="movie_desc">
+               
+            <a href="view/:{{movie.id}}">
+               <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="">
+            </a>
+             
+            <section class="preview">
+                    <div class="meta">
+                            <li>
+                                <a href="#">Genre</a>
+                            </li>
+        
+                            <li>
+                                <a href="#">Rating:{{movie.vote_average}}</a>
+                            </li>
+                            <li>
+                                <a href="favourites">
+                                    <button (click)="removefav(movie.id)">Remove</button>
+                                </a>
+                                
+                            </li>
+                            
+                    </div>
+        
+                    <div class="content">
+                            <h2>{{movie.title }}</h2>
+                            <!-- <h4>Ratings:{{movie.vote_average}}</h4> -->
+                            <!-- <h4>Votes:{{movie.vote_count}} </h4> -->
+                            <p>Directed by:<a href="">XXX</a> released on:XXX {{movie.vote_count}}votes</p>
+                            <div class="body">
+                                <p>
+                                    {{movie.overview}}
+                                </p>
+                            </div>
+                    </div>
+            </section>
+    </article>
+    </li>
+</div>

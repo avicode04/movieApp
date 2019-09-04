@@ -1,1 +1,42 @@
-<p>search works!</p>
+
+
+<!-- <h1><span>Search result for:</span>tid</h1> -->
+
+<!-- <input type="text" [(ngModel)]="movie"> -->
+
+<ul class="container_movie_desc">
+    <li *ngFor="let movie of movie">
+        <article class="movie_desc">
+               
+                <a href="#">
+                   <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="">
+                </a>
+                
+               
+                
+                <section class="preview">
+                        <div class="meta">
+                                <li>
+                                    <a href="#">Genre</a>
+                                </li>
+            
+                                <li>
+                                    <a href="#">Rating:{{movie.vote_average}}</a>
+                                </li>
+                        </div>
+            
+                        <div class="content">
+                                <h2>{{movie.title }}</h2>
+                                <!-- <h4>Ratings:{{movie.vote_average}}</h4> -->
+                                <!-- <h4>Votes:{{movie.vote_count}} </h4> -->
+                                <p>Directed by:<a href="">XXX</a> released on:XXX {{movie.vote_count}}votes</p>
+                                <div class="body">
+                                    <p>
+                                        {{movie.overview}}
+                                    </p>
+                                </div>
+                        </div>
+                </section>
+        </article>
+    </li>
+</ul>

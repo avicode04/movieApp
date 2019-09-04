@@ -26,5 +26,9 @@ export class UserDetailsComponent implements OnInit {
     console.log(value);
     this._router.navigateByUrl('/search/'+value);
   }
+  
+  addfav(movie){
+    this.gdetails.addtofav(movie).subscribe();
+  }
 
 }

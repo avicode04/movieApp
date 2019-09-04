@@ -1,26 +1,30 @@
 
 
+<!-- 
+<section>
+        <input type="text" [(ngModel)]="filterText" placeholder="filter movies here..">
+</section> -->
 
 
 
-<input type="text" [(ngModel)]="filterText" placeholder="filter movies here..">
-<br><br>
-<form action="">
+<!-- <form action="">
     <input  #mySearch type="text" placeholder="Search for movies..">
     <button (click) = "searchinput(mySearch.value)"  type="submit">Go!</button>
-</form>
+</form> -->
+
+<!-- <input #myInput type="text" placeholder="search for movies..">
+<button (click)="searchinput(myInput.value)">Go!</button> -->
+
 
 
 <ul class="container_movie_desc">
     <li *ngFor="let movie of Movies.results | filter:filterText">
         <article class="movie_desc">
                
-                <a href="#">
+                <a href="view/:{{movie.id}}">
                    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="">
                 </a>
-                
-               
-                
+                 
                 <section class="preview">
                         <div class="meta">
                                 <li>
@@ -29,6 +33,12 @@
             
                                 <li>
                                     <a href="#">Rating:{{movie.vote_average}}</a>
+                                </li>
+                                <li>
+                                    <button (click)="addfav(movie)">Add to Favourites
+                            
+                                    </button>
+                                    <!-- <a href="/favourites">Add to favourites</a> -->
                                 </li>
                         </div>
             
@@ -47,6 +57,7 @@
         </article>
     </li>
 </ul>
+
 
 
 <!-- <input type="text" [(ngModel)]="searchText" placeholder="filter movies here..">

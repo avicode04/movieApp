@@ -11,17 +11,21 @@ import { RouterModule, Routes } from '@angular/router'
 import { GdetailsService} from './gdetails.service';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { SearchComponent } from './search/search.component';
+import { DetailsComponent } from './details/details.component';
+import { FavouritesComponent } from './favourites/favourites.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
-const appRoutes: Routes = [
-  {path:'search/:query', component:SearchComponent}
-]
+const appRoutes: Routes = []
 
 @NgModule({
   declarations: [
     AppComponent,
     UserDetailsComponent,
     FilterPipe,
-    SearchComponent
+    SearchComponent,
+    DetailsComponent,
+    FavouritesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

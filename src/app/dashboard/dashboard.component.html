@@ -1,0 +1,44 @@
+
+<!-- <ul class="container_movie_desc">
+        <li *ngFor="let movie of Movies.results">
+            <article class="movie_desc">
+                    <a href="view/:{{movie.id}}">
+                       <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="">
+                    </a>
+            </article>
+        </li>
+    </ul> -->
+
+    <div class ="row" *ngFor="let item of Movies.results; let i = index">
+        <div *ngIf="i % 5 == 0" class="row">
+          <!-- {{ item }} -->
+
+          <div class="col" *ngIf="i + 1 < Movies.results.length">
+            <a href="view/:{{Movies.results[i+1].id}}">
+              <img src="https://image.tmdb.org/t/p/w500/{{Movies.results[i+1].poster_path}}" alt="">
+            </a>
+            <!-- {{ Movies.results[i + 1].title }} -->
+          </div>
+          <div class="col" *ngIf="i + 2 < Movies.results.length">
+              <a href="view/:{{Movies.results[i+2].id}}">
+                <img src="https://image.tmdb.org/t/p/w500/{{Movies.results[i+2].poster_path}}" alt="">
+              </a>
+              <!-- {{ Movies.results[i + 1].title }} -->
+            </div>
+            <div class="col" *ngIf="i + 3 < Movies.results.length">
+                <a href="view/:{{Movies.results[i+3].id}}">
+                  <img src="https://image.tmdb.org/t/p/w500/{{Movies.results[i+3].poster_path}}" alt="">
+                </a>
+                <!-- {{ Movies.results[i + 1].title }} -->
+              </div>
+              <div  *ngIf="i + 4 < Movies.results.length">
+                  <a href="view/:{{Movies.results[i+4].id}}">
+                    <img src="https://image.tmdb.org/t/p/w500/{{Movies.results[i+4].poster_path}}" alt="">
+                  </a>
+                  <!-- {{ Movies.results[i + 1].title }} -->
+                </div>
+          <!-- <div *ngIf="i + 2 < Movies.results.length">{{ Movies.results[i + 2].title }}</div>
+          <div *ngIf="i + 3 < Movies.results.length">{{ Movies.results[i + 3].title }}</div>
+          <div *ngIf="i + 4 < Movies.results.length">{{ Movies.results[i + 4].title }}</div> -->
+        </div>
+      </div>

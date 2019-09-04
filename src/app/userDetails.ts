@@ -1,4 +1,6 @@
 export interface IDetails{
+    id:number;
+    
     title:number;
     
     vote_average:string;

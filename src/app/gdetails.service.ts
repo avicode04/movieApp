@@ -18,4 +18,20 @@ export class GdetailsService {
   
   }
 
+  getsearch(url):Observable<any>{
+    return this.http.get<any>(url);
+  }
+
+  addtofav(movie):Observable<any>{
+    return this.http.post<any>('http://localhost:3000/posts/',movie);
+  }
+
+  getfav(){
+    return this.http.get<any>('http://localhost:3000/posts');
+  }
+
+  removeFav(movie:number):Observable<any>{
+    return this.http.delete<any>(`${'http://localhost:3000/posts'}/${movie}`);
+  }
+
 }

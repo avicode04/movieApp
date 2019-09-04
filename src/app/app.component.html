@@ -1,29 +1,130 @@
-<!DOCTYPE html>
+<!-- <div class="navbar">
+    <ul>
+        <li>
+            <a href="dashboard">Home</a>
+        </li>
+        <li>
+            <a href="movies">Movies</a>
+        </li>
+        <li>
+            <a href="#">TV series</a>    
+        </li>
+        <li>
+          <a href="favourites">Favourites</a>
+        </li>
+        <li>
+            <a href="#">Login</a>
+        </li>
+        <li>
+          <form action="">
+            <input #myInput type="text">
+            <button (click)="searchInput(myInput.value)">GO!</button>
+          </form>
+        </li>
+    </ul>
+</div> -->
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+  <!-- Links -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <a class="navbar-brand" href="dashboard">
+      <img src="../assets/img/imdb-icon-png-15.jpg" alt="">
+    </a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="dashboard">Home</a>
+          </li>
+      <li class="nav-item">
+        <a class="nav-link" href="movies">Movies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="$">TV-series</a>
+      </li>
+      <li clas="nav-item">
+        <a class="nav-link" href="favourites">Favourites</a>
+      </li>
+
+      <li>
+          <form class="form-inline" action="/action_page.php">
+            <input #myInput class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button (click)="searchinput(myInput.value)">Go!</button>
+          </form>
+      </li>
+    </ul>
+  </nav>
+  
+  <div class="jumbotron">
+    <img src="../assets/img/697989.jpg" alt="">
+  </div>
+
+  
+
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>AMDB</title>
   </head>
   <body>
     
-    <!-- Navigation bar -->
+    
     <div class="container">
       <div class="logo">
         <img style="height: 100px; width: 100px;" src="../assets/img/imdb-icon-png-15.jpg" alt="Imdb logo">
         <h1>AMDB<sub>Moviegasm</sub></h1>
-      </div><!--LOGO ends here-->
+      </div>
       <div class="navbar">
 
-      </div><!--NAVbar ends here-->
-    </div><!--Container ends here-->
+      </div>
+    </div> -->
     <!-- Search Bar -->
     <!-- <form action="" class="myForm">
       <input #myInput type="text" placeholder="search for movies">
       <button type="submit" id="myInput">GO!</button>
     </form> -->
     <!-- Top rated movies list -->
-    <app-user-details></app-user-details>
-  </body>
-</html>
+    
+    <!-- <app-user-details></app-user-details> -->
+  <!-- </body>
+</html> -->
 
 
+<router-outlet></router-outlet>
+<!-- 
+<section id="footer">
+		<div class="container">
+        <div class="row">
+          <div class="col">
+            <h3>Explore</h3>
+            <ul class="ful">
+              <li><a href="">Home</a></li>
+              <li><a href="">Movies</a></li>
+              <li><a href="">TV series</a></li>
+              <li><a href="">Favourites</a></li>
+              <li><a href="">Rate Us</a></li>
+            </ul>
+          </div>
 
+          
+
+          
+          
+          
+          
+
+
+          
+
+        </div>    
+        
+    </div>			
+</section> -->
